@@ -22,7 +22,7 @@ jobs:
         run: docker build ./worker -t workertag
       
       - name: docker build seed
-        run: docker build ./seed -t seedtag
+        run: docker build ./seed-data -t seedtag
       
       - name: docker build result
         run: docker build ./result -t resulttag
