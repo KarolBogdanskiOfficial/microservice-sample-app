@@ -18,11 +18,11 @@ jobs:
       - name: docker build vote     
         run:  docker build ./vote -t voteTag
   
-      -name: docker build worker
+      - name: docker build worker
       run: docker build ./worker -t workerTag
       
-      -name: docker build seed
+      - name: docker build seed
       run: docker build ./seed -t seedTag
       
-      -name: docker build result
+      - name: docker build result
       run: docker build ./result -t resultTag
