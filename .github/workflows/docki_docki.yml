@@ -16,13 +16,13 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: docker build vote     
-        run:  docker build ./vote -t voteTag
+        run:  docker build ./vote -t votetag
   
       - name: docker build worker
-        run: docker build ./worker -t workerTag
+        run: docker build ./worker -t workertag
       
       - name: docker build seed
-        run: docker build ./seed -t seedTag
+        run: docker build ./seed -t seedtag
       
       - name: docker build result
-        run: docker build ./result -t resultTag
+        run: docker build ./result -t resulttag
