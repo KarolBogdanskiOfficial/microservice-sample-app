@@ -26,3 +26,12 @@ jobs:
       
       - name: docker build result
         run: docker build ./result -t resulttag
+
+      - name: Publish to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: ${{ github.repository }}/next
+          tags: latest, ${{ github.run_number }}
