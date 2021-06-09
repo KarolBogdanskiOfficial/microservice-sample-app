@@ -1,13 +1,9 @@
-FROM node:12.18-alpine
+FROM node:13-alpine
+WORKDIR /result-app
 
-ENV NODE_ENV=production
-WORKDIR /opt
+COPY package*.json ./
 
-COPY package*.json, ./
-RUN npm install --production --silent && mv node_modules ../
+RUN npm install
 
-COPY . .
-
-EXPOSE 3000
-
+COPY server.js .
 CMD ["node", "server.js"]
