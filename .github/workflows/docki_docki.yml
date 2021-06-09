@@ -1,0 +1,28 @@
+
+name: Docker Builds
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: docker build vote     
+        run:  docker build ./vote -t votetag
+  
+      - name: docker build worker
+        run: docker build ./worker -t workertag
+      
+      - name: docker build seed
+        run: docker build ./seed-data -t seedtag
+      
+      - name: docker build result
+        run: docker build ./result -t resulttag
