@@ -24,8 +24,7 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          
-          context: 
-            tags: ./worker
+          registry: docker.pkg.github.com          
+          context: .
             push: true
+            tags: ./worker:essa
