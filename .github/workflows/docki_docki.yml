@@ -31,4 +31,6 @@ jobs:
         with:   
           context: ./worker
           push: true
-          tags: worker:essa
+          tags: |
+            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.sha }}
+            docker.pkg.github.com/${{ github.repository }}/octo-image:${{ github.ref }}
