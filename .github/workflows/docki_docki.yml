@@ -31,6 +31,4 @@ jobs:
         with:   
           context: ./worker
           push: true
-          tags: |
-            docker.pkg.github.com/${{ github.repository }}/worker:essa
-            docker.pkg.github.com/${{ github.repository }}/worker:essa
+          tags: docker.pkg.github.com/microservice-sample-app/worker:essa
