@@ -31,4 +31,4 @@ jobs:
         with:   
           context: ./worker
           push: true
-          tags: docker.pkg.github.com/${{ github.repository }}/worker/worker:${{ github.ref }}
+          tags: docker.pkg.github.com/${{ github.repository }}/worker/worker:sample_tag
