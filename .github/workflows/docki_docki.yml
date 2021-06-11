@@ -26,5 +26,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com          
           context: .
-            push: true
-            tags: ./worker:essa
+          push: true
+          tags: ./worker:essa
