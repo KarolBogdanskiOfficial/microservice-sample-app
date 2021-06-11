@@ -31,4 +31,4 @@ jobs:
         with:   
           context: ./worker
           push: true
-          tags: docker.pkg.github.com/karolbogdanskiofficial/microservice-sample-app//worker/worker:sample_tag
+          tags: docker.pkg.github.com//KarolBogdanskiOfficial/microservice-sample-app/tree/master/worker/worker:tagg
