@@ -31,4 +31,4 @@ jobs:
         with:   
           context: ./worker
           push: true
-          tags: docker.pkg.github.com/karolbogdanskiofficial/microservice-sample-app/worker:latest
+          tags: ghcr.io/karolbogdanskiofficial/microservice-sample-app/worker:latest
