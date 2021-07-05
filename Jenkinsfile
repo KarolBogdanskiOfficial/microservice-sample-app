@@ -14,7 +14,7 @@ pipeline {
 
 	    stage('push') {
                 steps { 
-	            sh 'ghcr.io/karolbogdanskiofficial/microservice-sample-app/worker:latest'
+	            sh 'docker push ghcr.io/karolbogdanskiofficial/microservice-sample-app/worker:latest'
 		}
 	    }
     	}
