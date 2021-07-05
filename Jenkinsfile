@@ -11,7 +11,7 @@ pipeline{
                 sh 'docker build -t worker:2.0 ./worker ' 
             }
         }
-        stage('Login) {
+        stage('Login') {
             steps{
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
