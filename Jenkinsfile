@@ -11,11 +11,7 @@ pipeline {
 		    sh 'docker build -t ghcr.io/karolbogdanskiofficial/microservice-sample-app/worker:latest ./worker'
                 }
             }
-            #stage('login') { 
-	        #steps {
-		    #sh 'docker login https://docker.pkg.github.com -u $GITHUB_CREDENTIALS_USR -p $GITHUB_CREDENTIALS_PSW'    
-	    	#}
-	    #}
+
 	    stage('push') {
                 steps { 
 	            sh 'ghcr.io/karolbogdanskiofficial/microservice-sample-app/worker:latest'
