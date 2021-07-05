@@ -4,7 +4,7 @@ pipeline{
     environment{
         DOCKERHUB_CREDENTIALS = credentials('kbogdanski')
     }
-
+    node{
     stages {
         stage('Build'){
             steps{
@@ -21,6 +21,7 @@ pipeline{
                 sh 'docker push worker:2.0'
             }
         }
+    }
     }
     post {
         always {
