@@ -1,6 +1,6 @@
 pipeline {
 	
-	agent { node { label 'docker-agent' } }
+	agent any
 	
     	environment {
 		GITHUB_CREDENTIALS = credentials('github-karolbogdanski')
