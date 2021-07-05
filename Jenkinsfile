@@ -4,8 +4,9 @@ pipeline{
     environment{
         DOCKERHUB_CREDENTIALS = credentials('kbogdanski')
     }
-    node{
+
     stages {
+            node{
         stage('Build'){
             steps{
                 sh 'docker build -t worker:2.0 ./worker ' 
@@ -22,12 +23,12 @@ pipeline{
             }
         }
     }
-    
+    }
     post {
         always {
             sh 'docker logout'
         }
     }
-    }
+    
 
 }
